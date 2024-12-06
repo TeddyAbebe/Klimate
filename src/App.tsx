@@ -3,9 +3,10 @@ import "./App.css";
 import { ThemeProvider } from "./context/theme-provider";
 import WeatherDashboard from "./pages/weather-dashboard";
 import CityPage from "./pages/city-page";
-import { Layout, Toaster } from "./components";
+import { Toaster } from "./components";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Layout from "./components/Layout";
 
 const queryClient = new QueryClient({
   defaultOptions: {
