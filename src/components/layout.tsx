@@ -1,8 +1,9 @@
-import type { PropsWithChildren } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { Header } from ".";
 import Footer from "./Footer";
 
-const Layout = ({ children }: PropsWithChildren) => {
+const Layout = ({ children }: any) => {
   return (
     <div className="bg-gradient-to-br from-background to-muted">
       <Header />
