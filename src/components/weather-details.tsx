@@ -18,6 +18,7 @@ export function WeatherDetails({ data }: WeatherDetailsProps) {
   // Convert wind degree to direction
   const getWindDirection = (degree: number) => {
     const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+
     const index =
       Math.round(((degree %= 360) < 0 ? degree + 360 : degree) / 45) % 8;
     return directions[index];
@@ -55,18 +56,21 @@ export function WeatherDetails({ data }: WeatherDetailsProps) {
       <CardHeader>
         <CardTitle>Weather Details</CardTitle>
       </CardHeader>
+
       <CardContent>
         <div className="grid gap-6 sm:grid-cols-2">
           {details.map((detail) => (
             <div
               key={detail.title}
-              className="flex items-center gap-3 rounded-lg border p-4"
+              className="flex items-center gap-3 rounded-lg border p-4 hover:bg-muted/30 cursor-pointer"
             >
               <detail.icon className={`h-5 w-5 ${detail.color}`} />
+
               <div>
                 <p className="text-sm font-medium leading-none">
                   {detail.title}
                 </p>
+
                 <p className="text-sm text-muted-foreground">{detail.value}</p>
               </div>
             </div>

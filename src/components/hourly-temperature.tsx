@@ -35,6 +35,7 @@ export function HourlyTemperature({ data }: HourlyTemperatureProps) {
       <CardHeader>
         <CardTitle>Today's Temperature</CardTitle>
       </CardHeader>
+
       <CardContent>
         <div className="h-[200px] w-full">
           <ResponsiveContainer width="100%" height="100%">
@@ -46,6 +47,7 @@ export function HourlyTemperature({ data }: HourlyTemperatureProps) {
                 tickLine={false}
                 axisLine={false}
               />
+
               <YAxis
                 stroke="#888888"
                 fontSize={12}
@@ -53,6 +55,7 @@ export function HourlyTemperature({ data }: HourlyTemperatureProps) {
                 axisLine={false}
                 tickFormatter={(value) => `${value}°`}
               />
+
               <Tooltip
                 content={({ active, payload }) => {
                   if (active && payload && payload.length) {
@@ -82,6 +85,7 @@ export function HourlyTemperature({ data }: HourlyTemperatureProps) {
                   return null;
                 }}
               />
+
               <Line
                 type="monotone"
                 dataKey="temp"
@@ -89,6 +93,7 @@ export function HourlyTemperature({ data }: HourlyTemperatureProps) {
                 strokeWidth={2}
                 dot={false}
               />
+
               <Line
                 type="monotone"
                 dataKey="feels_like"
