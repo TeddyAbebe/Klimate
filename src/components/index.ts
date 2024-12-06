@@ -7,5 +7,6 @@ export * from "./ui/scroll-area";
 export * from "./ui/skeleton";
 export * from "./ui/sonner";
 export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
 export { default as WeatherSkeleton } from "./Loading-Skeleton";
 export { default as ErrorDisplay } from "./ErrorDisplay";

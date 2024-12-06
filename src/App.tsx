@@ -6,7 +6,7 @@ import CityPage from "./pages/city-page";
 import { Toaster } from "./components";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import Layout from "./components/Layout";
+import Layout from "@/Layout";
 
 const queryClient = new QueryClient({
   defaultOptions: {
